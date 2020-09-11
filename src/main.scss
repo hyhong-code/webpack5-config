@@ -1,0 +1,14 @@
+body {
+  display: grid;
+  transition: all 0.5s;
+  user-select: none;
+  background: rgb(2, 0, 36);
+  background: rgb(63, 94, 251);
+  background: radial-gradient(
+    circle,
+    rgba(63, 94, 251, 1) 0%,
+    rgba(252, 70, 107, 1) 100%
+  );
+  font-size: responsive;
+  color: white;
+}
