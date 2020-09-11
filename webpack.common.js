@@ -2,7 +2,13 @@ const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
-  entry: "./src/index.js",
+  // Code splitting: multiple entries
+  entry: {
+    // key is file name
+    index: { import: "./src/js/index.js", dependOn: "shared" },
+    sum: { import: "./src/js/sum.js", dependOn: "shared" },
+    shared: "lodash", // lodash library
+  },
 
   module: {
     rules: [
@@ -36,6 +42,13 @@ module.exports = {
         },
       },
     ],
+  },
+
+  optimization: {
+    // Split every chunk into own file
+    splitChunks: {
+      chunks: "all",
+    },
   },
 
   plugins: [

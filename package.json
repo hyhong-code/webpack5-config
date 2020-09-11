@@ -32,6 +32,7 @@
     "webpack-dev-server": "^3.11.0"
   },
   "dependencies": {
+    "lodash": "^4.17.20",
     "webpack-merge": "^5.1.4"
   }
 }
